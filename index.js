@@ -1,6 +1,10 @@
 const express = require("express");
+const conectarDb = require("./config/db");
 // Creación del servidor
 const app = express();
+
+// Conexión a la base de datos
+conectarDb();
 
 // Definición de ruta principal
 
