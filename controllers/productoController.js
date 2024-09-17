@@ -69,7 +69,7 @@ const deleteProduct = async (req, res) => {
     if (!productById) {
       return res.status(404).json({ msg: "No existe el producto" });
     }
-    const product = await Producto.findOneAndRemove({ _id: id });
+    const product = await Producto.findOneAndDelete({ _id: id });
     res.json(product);
   } catch (error) {
     console.log(error);

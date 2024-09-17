@@ -1,10 +1,12 @@
 const express = require("express");
 const conectarDb = require("./config/db");
+const cors = require("cors");
 // Creación del servidor
 const app = express();
 
 // Conexión a la base de datos
 conectarDb();
+app.use(cors());
 
 // Definición de ruta principal
 app.use(express.json());
